@@ -1,32 +1,76 @@
-html,body{
-    font-family: Verdana,sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
-    display:block
+
+html{
+    font-family: Helvetica, sans-serif;
 }
-summary{
-    display:list-item
+/* 
+ 1. vị trí 
+ 2. kích thước (width, height)
+ 3. màu sắc
+ 4. style
+*/
+#main {
+
 }
-h1{
-    font-size: 36px;
+#header {
+    height: 46px;
+    background-color: black;
 }
-h2{
-    font-size: 30px;    
+#nav, .subnav {
+    
+    list-style-type: none; /*xoa dau cham cua list*/
 }
-h3{
-    font-size: 24px;
+#nav>li{
+    display: inline-block;
 }
-h4{
-    font-size: 20px;
-}
-h5{
-    font-size: 18px;
-}
-h6{
-    font-size: 16px;
-}
-.dropdown_hover{
+#nav li{
     position: relative;
+}
+
+#nav>li>a{
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 46px;
+}
+#nav li a{
+    text-decoration: none;
+    padding: 0 24px ;
+    display: block;
+}
+#nav >li:hover> a,
+#nav .subnav li:hover{
+    color: #000;
+    background-color: #ccc;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 3);
+}
+#nav .subnav a{
+    color: #000;
+    padding: 0 12px;/*chia het cho 4*/
+    line-height: 38px;
+}
+
+#slider {
+    min-height: 500px;
+    /* background-color: #333; */
+}
+#content {
+
+}
+#footer {
+
 }
