@@ -1,55 +1,77 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: Helvetica, sans-serif;
 }
+
 /* 
  1. vị trí 
  2. kích thước (width, height)
  3. màu sắc
  4. style
 */
-#main {
 
+.text-white{
+    color: #fff !important;
 }
+
+#main {}
+
 #header {
     height: 46px;
     background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
-#nav, .subnav {
-    
-    list-style-type: none; /*xoa dau cham cua list*/
-}
-#nav>li{
+
+#nav {
     display: inline-block;
 }
-#nav li{
+
+#nav,
+.subnav {
+
+    list-style-type: none;
+    /*xoa dau cham cua list*/
+}
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav li {
     position: relative;
 }
 
-#nav>li>a{
+#nav>li>a {
     color: #fff;
     text-transform: uppercase;
     line-height: 46px;
 }
-#nav li a{
+
+#nav li a {
     text-decoration: none;
-    padding: 0 24px ;
+    padding: 0 24px;
     display: block;
 }
-#nav >li:hover> a,
-#nav .subnav li:hover{
+
+#nav>li:hover>a,
+#nav .subnav li:hover {
     color: #000;
     background-color: #ccc;
 }
-#nav li:hover .subnav{
+
+#nav li:hover .subnav {
+    /*hiện list*/
     display: block;
 }
-#nav .subnav{
+
+#nav .subnav {
     display: none;
     position: absolute;
     top: 100%;
@@ -58,19 +80,166 @@ html{
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 3);
 }
-#nav .subnav a{
+
+#nav .subnav a {
     color: #000;
-    padding: 0 12px;/*chia het cho 4*/
+    padding: 0 12px;
+    /*chia het cho 4*/
     line-height: 38px;
 }
 
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .search-btn {
+    float: right;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    /*để căn item bên trong*/
+    justify-content: center;
+    /*căn ngang*/
+    align-items: center;
+    /*căn dọc*/
+    cursor: pointer;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    font-size: 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
 #slider {
-    min-height: 500px;
-    /* background-color: #333; */
+    position: relative;
+    z-index: -1;
+    /* min-height: 500px; */
+    background-color: #333;
+    margin-top: 46px;
+    padding-top: 50%;
+    /*chiều cao bằng 50% chiều ngang*/
+    background: url('/assets/img/chicago.jpg') top center / cover no-repeat
 }
-#content {
+
+#slider .text-content {
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    color: #fff;
+    /* căn giữa */
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%);
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-decription {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+
+#content {}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 60%;
+}
+
+#content .section-heading,
+#content .section-sub-heading {
+    text-align: center;
+}
+
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+    /*tiếng việt là 1.6*/
+}
+
+#content .member-list {
+    margin-top: 48px;
+    overflow: hidden;/*fix float*/
+}
+
+#content .member-item {
+    float: left;
+    /*xếp thành hàng ngang*/
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 15px;
 
 }
-#footer {
 
+#content .member-img {
+    width: 154px;
+    border-radius: 5px;
 }
+/* tour section */
+.tour-section{
+    background-color: #000;
+}
+.tickets-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style-type: none;
+}
+.tickets-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.tickets-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.tickets-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+#footer {}
